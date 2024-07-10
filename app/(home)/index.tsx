@@ -1,12 +1,11 @@
 import { SignedIn, SignedOut, useAuth, useUser } from "@clerk/clerk-expo";
-import { Link } from "expo-router";
+import { Link, Redirect } from "expo-router";
 import { Button, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Page() {
   const { user } = useUser();
   const { signOut } = useAuth();
-    console.log('HOME INDEX:')
   return (
     <SafeAreaView>
       <SignedIn>
